@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Packed Bed Reactor - Gas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+        .button{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        }
+    </style>
+</head>
+<body class="container shadow-lg p-3 mb-5 bg-white rounded ">
+    <h1 class="d-flex justify-content-center">Packed Bed Reactor - Gas</h1>
+    <p>Enter the required parameters for the Packed Bed Reactor (Gas):</p>
+    <b>For reaction aA + bB --- > cC + dD</b>
+    
+    <form action="/calculatePbr_gas" method="POST">
+        <label for="flow_rate">Flow Rate:</label>
+        <input type="number" step="any" name="flow_rate" required><br>
+        <br>
+        <label for="concentration">Concentration:</label>
+        <input type="number" step="any" name="concentration" min="0" required><br>
+        <br>
+        <label for="conversion">Conversion:</label>
+        <input type="number" step="any" name="conversion" min="0" max="1" required><br>
+        <br>
+        <label for="rate_constant">Rate Constant:</label>
+        <input type="number" step="any" name="rate_constant" required><br>
+        <br>
+        <label for="alpha">Reaction Order:</label>
+        <input type="number" step="any" name="alpha" required><br>
+        <br>
+        <label for="coff_a">Coefficient a:</label>
+        <input type="number" step="any" name="coff_a" required><br>
+        <br>
+        <label for="coff_b">Coefficient b:</label>
+        <input type="number" step="any" name="coff_b" required><br>
+        <br>
+        <label for="coff_c">Coefficient c:</label>
+        <input type="number" step="any" name="coff_c" required><br>
+        <br>
+        <label for="coff_d">Coefficient d:</label>
+        <input type="number" step="any" name="coff_d" required><br>
+        <br>
+        <label for="reactor_length">Reactor Length:</label>
+        <input type="number" step="any" name="reactor_length" required><br>
+        <br>
+        <label for="gas_density">Gas Density:</label>
+        <input type="number" step="any" name="gas_density" required><br>
+        <br>
+        <label for="superficial_mass_velocity">Superficial Velocity:</label>
+        <input type="number" step="any" name="superficial_mass_velocity" required><br>
+        <br>
+        <label for="porosity">Porosity:</label>
+        <input type="number" step="any" name="porosity" required><br>
+        <br>
+        <!--         
+        <label for="fluid_density">Fluid Density:</label>
+        <input type="number" step="any" name="fluid_density" required><br> -->
+        
+        <label for="particle_diameter">Particle Diameter:</label>
+        <input type="number" step="any" name="particle_diameter" required><br>
+        <br>
+        <label for="gas_viscosity">Gas Viscosity:</label>
+        <input type="number" step="any" name="gas_viscosity" required><br>
+        <br>
+        <label for="pressure_not">Initial Pressure:</label>
+        <input type="number" step="any" name="pressure_not" required><br>
+        <br>
+        <label for="Gc">Gc:</label>
+        <input type="number" step="any" name="Gc" required><br>
+        <br>
+        <button class="button" type="submit">Calculate</button>
+    </form>
+    <br>
+    <a href="/packed_bed_reactor">Back to Packed Bed Reactor Selection</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/">Back to Main Menu</a>
+</body>
+</html>

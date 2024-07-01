@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plug Flow Reactor - Gas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+        .button{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        }
+    </style>
+</head>
+<body class="container shadow-lg p-3 mb-5 bg-white rounded ">
+    <h1 class="d-flex justify-content-center">Plug Flow Reactor - Gas</h1>
+    <p>Enter the required parameters for the Plug Flow Reactor (Gas):</p>
+    <b>For reaction aA + bB --- > cC + dD</b>
+    
+    <form action="/calculatePfr_gas" method="POST">
+        <label for="flow_rate">Flow Rate:</label>
+        <input type="number" step="any" name="flow_rate" required><br>
+        <br>
+        <label for="concentration">Concentration:</label>
+        <input type="number" step="any" min="0" name="concentration" required><br>
+        <br>
+        <label for="conversion">Conversion:</label>
+        <input type="number" step="any" min="0" max="1" name="conversion" required><br>
+        <br>
+        <label for="rate_constant">Rate Constant:</label>
+        <input type="number" step="any" name="rate_constant" required><br>
+        <br>
+        <label for="alpha">Reaction Order:</label>
+        <input type="number" step="any" name="alpha" required><br>
+        <br>
+        <label for="coff_a">Coefficient a:</label>
+        <input type="number" step="any" name="coff_a" required><br>
+        <br>
+        <label for="coff_b">Coefficient b:</label>
+        <input type="number" step="any" name="coff_b" required><br>
+        <br>
+        <label for="coff_c">Coefficient c:</label>
+        <input type="number" step="any" name="coff_c" required><br>
+        <br>
+        <label for="coff_d">Coefficient d:</label>
+        <input type="number" step="any" name="coff_d" required><br>
+        <br>
+        <label for="input_pressure_not">Inlet Pressure:</label>
+        <input type="number" step="any" name="input_pressure_not" required><br>
+        <br>
+        <label for="output_pressure_not">Outlet Pressure:</label>
+        <input type="number" step="any" name="output_pressure_not" required><br>
+        <br>
+        <button class="button" type="submit">Calculate</button>
+    </form>
+    <a href="/">Back to Main Menu</a>
+</body>
+</html>
